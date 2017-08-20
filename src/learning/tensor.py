@@ -15,7 +15,17 @@ class Tensor:
         a = tf.constant([1.0, 2.0], name="a")
         b = tf.constant([2.0, 3.0], name='b')
         result = a + b
-        print(result)
+        session = tf.InteractiveSession() #免去将产生的会话注册为默认会话的过程
+        print((result.eval()))
+        session.close()
+
+        # ConfigProto 对会话进行配置
+        config = tf.ConfigProto(allow_soft_placement=True, log_device_placement=True)
+
+        with tf.Session(config=config) as sess:
+            #print(sess.run(result))
+            #必须指定会话后才能用eval
+            print((result.eval()))
 
     def two(self):
         print(tf.__version__)
@@ -42,5 +52,4 @@ class Tensor:
 
 tensor = Tensor()
 tensor.one()
-tensor.two()
-print(Tensor.__doc__)
+#tensor.two()
