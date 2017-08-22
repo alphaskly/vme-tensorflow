@@ -20,8 +20,6 @@ def dbl_linear(n):
 			y += 1
 	return arr
 
-
-
 def is_valid_IP(strng):
 	arr = strng.split('.')
 	pat = re.compile(r'([0-9]{1,3})')

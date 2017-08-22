@@ -71,4 +71,4 @@ class BCP:
 if __name__ == '__main__':
     bcp = BCP()
     bcp.run()
-    bcp.runTest()
+   #bcp.runTest()
