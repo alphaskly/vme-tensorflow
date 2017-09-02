@@ -99,9 +99,3 @@ def spiralize(size):
 			dx, dy = dy * (2 * dx - 1), dx
 		spiral[y][x] = 0
 	return spiral
-
-for x in spiralize(5):
-	print(x)
-
-
-

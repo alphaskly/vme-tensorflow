@@ -7,7 +7,7 @@ class DownloadMNIST:
         #载入MNIST数据集
         :return:
         '''
-        self.mnist = input_data.read_data_sets(".", one_hot=True)
+        self.mnist = input_data.read_data_sets("../../resources", one_hot=True)
         '''
         print("Training data size:",self.mnist.train.num_examples)
         print("Validating data size:", self.mnist.validation.num_examples)
