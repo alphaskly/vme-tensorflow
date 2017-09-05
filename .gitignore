@@ -4,3 +4,7 @@ tmp
 .DS_Store
 submissions.txt
 npm-debug.log
+*.gz
+*.index
+*.meta
+*.data-00000-of-00001
