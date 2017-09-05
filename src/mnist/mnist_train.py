@@ -48,7 +48,8 @@ def train(mnist):
             _, loss_value, step = sess.run([train_op, loss, global_step], feed_dict={x:xs, y_:ys})
             if i % 1000 == 0:
                 print("After %d training step(s), loss on training batch is %g"%(step, loss_value))
-                saver.save(sess, os.path.join(MODEL_SAVE_PATH, MODEL_NAME), global_step=global_step)
+                if i /1000 == 29:
+                    saver.save(sess, os.path.join(MODEL_SAVE_PATH, MODEL_NAME), global_step=global_step)
 
 def main(argv=None):
     mnist = input_data.read_data_sets("../../resources", one_hot=True)
